@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.js"></script>
+    <script src="./three.module.js"></script>
+    <script src="./gltfloader.js"></script>
+</head>
+<style>
+    canvas {
+        background-color: white;
+        background-image: url("https://greggman.com/images/godzilla.gif");
+        background-size: cover;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+</style>
+
+<body style="padding: 0; margin: 0; height: 100vh; width: 100vw; max-width: 100%;">
+    <span style="position: absolute; z-index: 10; background: white; margin-top: 100%;">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas totam cupiditate dolores? Error ducimus
+        labore dolor consequatur aliquid exercitationem nulla atque a facere magnam, voluptatem, cupiditate accusantium
+        delectus culpa minima!
+        Praesentium delectus suscipit quae reiciendis, debitis quis, cum natus dolorum, totam quam eligendi cumque. Et
+        ut quos molestiae eius dicta voluptatem, nihil numquam labore modi quae totam deleniti soluta accusamus?
+        Repudiandae molestiae quibusdam sit laboriosam minima eligendi et deserunt dolorem. Commodi sequi repellat
+        doloribus placeat doloremque quaerat, dignissimos maxime optio aliquam delectus suscipit explicabo est nesciunt.
+        Et aliquam aspernatur iste.
+        Ipsum, sunt! Magni deserunt debitis id et. Exercitationem odit deserunt blanditiis quos voluptas sed inventore
+        dolorem, omnis, quas praesentium natus officiis fuga! Impedit quisquam necessitatibus fuga tenetur repudiandae
+        dolorem doloribus.
+        Distinctio nobis voluptatum sapiente enim, minus tempore consectetur iste libero ipsam, iure accusamus
+        recusandae obcaecati molestiae, aut optio impedit quibusdam eligendi omnis. Hic quod blanditiis iure iste,
+        excepturi tenetur consequatur?
+        Placeat, omnis quasi nesciunt eveniet quod, possimus quia non, voluptatum error veritatis aperiam ut asperiores!
+        Nulla nisi mollitia quas omnis est sed, impedit iste rem fuga possimus dicta ullam in!
+        Quae dicta corporis, excepturi, ratione maxime adipisci nisi repellendus magni blanditiis eos magnam eius aut
+        necessitatibus, cupiditate animi aperiam voluptas alias beatae quisquam praesentium. Veritatis voluptatem ipsa
+        eveniet aliquam cum!
+        Voluptatibus obcaecati esse sed magni ullam nihil consectetur veniam saepe aperiam voluptates! Voluptas quam
+        beatae assumenda earum fugiat exercitationem, tempore quos ducimus incidunt amet! In assumenda pariatur id aut
+        dicta.
+        Soluta est doloribus ad excepturi, molestiae laudantium odio necessitatibus. Harum aliquam doloremque ipsum
+        neque id enim molestias veniam odio, ratione iste, ab quibusdam molestiae repellendus exercitationem illum unde
+        vero minima!
+        Obcaecati quod tenetur quaerat excepturi! Reprehenderit iusto laborum quod tempore, eaque provident quibusdam
+        eius temporibus reiciendis quas ipsam! Iure accusantium impedit natus consectetur perspiciatis nisi autem
+        molestiae aut officiis? Praesentium.
+        Cum modi neque libero illum necessitatibus dicta. Corporis molestiae ducimus reiciendis dolor magni quod
+        perspiciatis cum perferendis modi. Quam laborum explicabo cupiditate odit qui earum ipsum laboriosam nesciunt
+        expedita distinctio.
+        Quisquam natus beatae odit dicta esse maxime qui, facilis optio nostrum inventore velit culpa accusamus rem
+        aliquid ex exercitationem ea, distinctio ut? Dolorem maxime, eos sint expedita ipsum voluptate explicabo.
+        Aut non fuga reiciendis, corrupti tempore soluta in error doloribus recusandae assumenda, voluptatem pariatur
+        quia voluptatum molestiae iure quod magni modi possimus hic odio distinctio ut itaque commodi! Sunt, dolore?
+        Quaerat dicta, illo quam voluptatibus quos necessitatibus molestias soluta eligendi, totam voluptatem placeat
+        possimus, impedit esse amet! Perferendis saepe porro repellendus architecto at provident numquam aliquid quis,
+        obcaecati eos veniam?
+        Ratione eos neque voluptatibus, incidunt tenetur doloribus possimus dolorum eius molestias earum, consequatur
+        non laudantium perferendis quod at aliquam a dolore quibusdam numquam nihil veniam error minus reprehenderit.
+        Quia, in?
+        Soluta nesciunt ex iste eaque, aliquam eveniet iure? Nihil voluptatibus quasi quaerat dignissimos, autem et
+        dolore commodi eaque ipsa eos necessitatibus sequi voluptates pariatur sed dolores nam saepe atque repellendus.
+        Omnis, tempora quisquam, ratione suscipit eaque accusamus voluptates cumque a quo dolor officia id modi? Aliquam
+        vel, non, consequatur nostrum ducimus iste nam sunt, obcaecati nihil dolores quae odio dolore?
+        Earum tenetur quidem deleniti ullam nostrum accusantium, officiis laboriosam dolor qui perspiciatis quae
+        similique repudiandae. Incidunt maiores rem libero, dolorum veritatis ullam! Obcaecati inventore corporis nisi
+        perspiciatis autem mollitia quia.
+        Quasi voluptatibus, cupiditate molestiae aperiam at, adipisci tempora facere beatae expedita, praesentium nam!
+        Illo delectus labore atque voluptatem cumque, sed doloremque quasi vero excepturi quisquam repellendus
+        necessitatibus voluptas deleniti et?
+        Aspernatur inventore explicabo voluptate reiciendis assumenda autem tenetur optio distinctio quidem minima
+        minus, eligendi eius? Corrupti soluta eligendi sequi. Excepturi, quaerat perferendis? Corporis saepe, ullam
+        illum dignissimos sed voluptates velit?
+        Facere consequatur debitis fugit distinctio corporis expedita saepe ratione delectus, tempora amet, incidunt
+        ducimus in. Itaque possimus neque soluta, laborum, iste hic obcaecati molestias voluptatum totam illum
+        aspernatur deserunt ab?
+        Molestias, nam? Nemo nam illum iure assumenda neque dolorem asperiores laudantium quia quaerat totam at aperiam
+        commodi omnis, tenetur, ipsum itaque fugit sint dolores eius laborum veniam aspernatur quae. Iusto.
+        Laboriosam voluptatibus modi, architecto officia commodi quisquam tempora animi molestiae autem, voluptate nobis
+        qui atque itaque nostrum deserunt aliquam nisi odio fugit aspernatur suscipit obcaecati. At, vel. Quis, ex
+        aspernatur!
+        Consequatur, officia, dolorum cum error minima repellat hic culpa blanditiis corrupti placeat ad facere. Harum
+        sunt officia repudiandae, eveniet blanditiis totam quas, ex quidem sit expedita hic aperiam illum cumque.
+        Tenetur voluptatum, ex consequatur corrupti consequuntur similique doloremque, est sapiente velit itaque nulla
+        nisi vero nesciunt, ipsa officiis quod? Ex suscipit perferendis explicabo adipisci debitis ab ad, odit repellat
+        illo.
+        Veritatis officia voluptatibus repudiandae asperiores est accusamus ut porro, laudantium culpa, nihil itaque?
+        Quasi perspiciatis architecto et, itaque mollitia nihil dignissimos, laboriosam optio voluptatum autem, id amet
+        expedita cum qui!
+        Officiis nulla harum dolores natus. Necessitatibus itaque deserunt minus adipisci ullam suscipit quod voluptates
+        sequi laborum cum. Ut ad inventore blanditiis quibusdam quos, eum neque officia. A eaque dolorum possimus.
+        Architecto quaerat alias, animi tempore illo quos accusamus quae odio expedita nulla repellat quis mollitia
+        blanditiis. Natus aliquam vel assumenda. Quos placeat ipsum accusantium cupiditate, dolor laboriosam facilis qui
+        distinctio.
+        At, culpa? Autem libero mollitia aliquid eum ad reiciendis a vero illum magnam quia voluptatem accusantium esse
+        maxime, itaque velit neque ipsam fuga repellendus eligendi adipisci! Inventore porro corrupti nihil!
+        Perferendis magni quod ab inventore molestias quam similique ex est, laborum odio, nemo consequuntur, quidem
+        sit. Nam harum ex magnam beatae voluptatum, sunt sit vitae nostrum facilis laboriosam placeat cum!
+        Molestiae odio consequuntur deleniti et voluptates possimus debitis, ut, quibusdam ullam voluptate numquam neque
+        enim dolores corporis esse aperiam cumque doloribus perspiciatis. Ipsam, autem! Tempore eos illo soluta deleniti
+        magnam.
+        Voluptate dolorem doloribus quae totam debitis quam dolores repudiandae veritatis, nulla deserunt minus sapiente
+        dolorum voluptates repellendus, aspernatur exercitationem numquam cum autem inventore? Dolor nobis deserunt quas
+        doloremque animi fugiat.
+        Enim expedita dolore illo fuga nisi. Debitis tempore voluptas autem ipsum, similique sequi earum. Quidem vero
+        voluptate ducimus ea dolore magnam quia culpa? Impedit sequi sit perspiciatis error inventore explicabo.
+        Alias aliquam tenetur consequatur nobis voluptatibus error ullam blanditiis pariatur in accusamus, veritatis
+        commodi dolorem iste sit eligendi placeat tempore ea voluptatum corrupti delectus quibusdam provident. Ab
+        perspiciatis a possimus.
+        Sint incidunt magni in fugit, quod quam nisi reprehenderit laudantium alias? Debitis deleniti quis architecto
+        eum cum dignissimos sequi? Rerum esse nobis inventore sit architecto, maiores consequuntur ipsum dolor
+        temporibus.
+        Hic et dolor maxime laborum laudantium vel tenetur eligendi eos ipsam fugit, molestiae, quia voluptas possimus
+        velit pariatur. Commodi, numquam asperiores? Enim ipsa aut omnis consectetur incidunt facilis impedit.
+        Repudiandae.
+        Pariatur accusantium excepturi maiores, voluptatum eum reprehenderit. Voluptate incidunt aliquid aperiam
+        deleniti, aut nulla, corporis neque libero, reiciendis debitis delectus commodi labore quidem sint. Fugit
+        voluptate placeat vero ex. Facilis!
+        Dicta veniam omnis reiciendis magni. Obcaecati distinctio rem error. Modi error in dolores quos ut ullam vel,
+        consequuntur doloremque rerum ipsa eaque quidem quisquam, sequi nisi porro assumenda cum culpa!
+        Cumque sequi, doloribus reiciendis aspernatur accusantium quas at magni libero consequuntur commodi ipsa soluta
+        architecto dicta laborum? Aspernatur quae cupiditate iusto dolore necessitatibus reiciendis, suscipit nemo totam
+        fuga minima! Voluptate?
+        Deleniti provident odit inventore quae labore illum nostrum aperiam dolorem? Repellendus dolore quidem aut
+        eaque, atque et ad sint molestiae incidunt aspernatur, totam autem consequatur odio placeat earum iusto illum.
+        Magnam quasi nulla reiciendis, laborum neque possimus unde soluta reprehenderit, a dicta, distinctio dolor
+        consectetur exercitationem? Soluta rerum sunt quisquam minus, labore veritatis fugiat vel dolorem, asperiores
+        distinctio, error ipsa!
+        Accusantium officia dolore dolorum? Dolores autem recusandae non assumenda, vero perspiciatis dolorem natus
+        officia debitis maxime! Nemo in rem dolore incidunt odit, quaerat harum magni sed iusto non, hic expedita!
+        Corporis voluptas incidunt consectetur perferendis illo, aut expedita! Hic unde in architecto maxime molestias
+        perferendis, voluptatum, rerum et, dignissimos necessitatibus dolor quos fugit nam expedita laboriosam ipsa
+        doloribus beatae fuga.
+        Recusandae voluptatibus debitis error non natus mollitia eaque obcaecati nihil blanditiis, officia odit corporis
+        laudantium enim, voluptate, rem ab quam magni delectus provident. Minima minus autem explicabo provident dolore
+        illum.
+        Eligendi molestias dolores illo neque, in minus quos! Neque laudantium accusantium aspernatur, non consequatur
+        minus. Nihil tempore inventore corrupti consequuntur autem, cum ipsum dolore nulla officiis deserunt odio
+        quibusdam recusandae!
+        Quae, nostrum iure totam reiciendis delectus non numquam illo quod, nam harum odit dignissimos placeat
+        explicabo. Quaerat itaque laboriosam pariatur aperiam a quo numquam sequi, saepe quibusdam. Provident, eveniet
+        aut!
+        Molestiae magni corrupti, architecto quia aliquam dignissimos explicabo id. Minus repudiandae, sit amet qui
+        officiis magni reiciendis explicabo? Amet totam assumenda temporibus enim, dicta quos perferendis quam eligendi
+        eius iure!
+        Tempore pariatur repellendus blanditiis natus tempora consectetur necessitatibus voluptate sit voluptas expedita
+        et accusamus vero optio est ducimus saepe ullam aut ea quis, officia totam, quibusdam labore! Labore, assumenda
+        corrupti!
+        Saepe ut magnam eveniet sint blanditiis maxime aut nostrum cumque, expedita consequatur non molestiae vel illum
+        soluta corrupti unde. Necessitatibus, eum nesciunt? Vero provident nisi error et sed nam quisquam!
+        Voluptates, ipsam tempore alias, perspiciatis aliquam possimus veniam debitis doloremque odit nisi enim
+        suscipit? Ut, vel non eligendi voluptatum reprehenderit fuga autem porro aliquid exercitationem facilis
+        repellendus, ullam reiciendis! In.
+        Dolore quidem temporibus quos ad quod ut doloremque architecto recusandae natus ipsam eos blanditiis assumenda
+        nesciunt facilis animi porro quaerat, eligendi omnis debitis id repellendus expedita reprehenderit, quis
+        necessitatibus. Eveniet.
+        Sint ut dignissimos nam officia velit ullam similique quidem at eligendi omnis nulla saepe nesciunt et animi,
+        placeat error repellendus ducimus recusandae. Voluptatum aperiam voluptatibus beatae, alias nostrum dignissimos
+        sit.
+        Quaerat repudiandae at deleniti aliquam eaque. Aut doloremque vel, dicta doloribus corporis reprehenderit labore
+        sapiente quam, architecto ea ducimus non tenetur nisi magni voluptates nesciunt assumenda? Dolores inventore rem
+        quia!
+        Nisi maiores omnis rerum ullam perferendis, praesentium saepe animi corporis. Consequatur eius quam esse earum
+        corrupti molestias repellendus, hic placeat soluta, pariatur maiores totam voluptates rerum cum! Nemo, unde
+        iusto.
+        Officia cum ratione temporibus molestias perferendis magni! Architecto doloremque ad ipsam animi aliquam minus
+        nesciunt assumenda sapiente, corporis, nam sequi rerum! Quasi doloremque tempore ab eligendi quibusdam non, cum
+        voluptatibus?
+        Fugiat non saepe, cumque reiciendis, quia doloribus at quas consequuntur magni impedit tempora natus! Totam,
+        perferendis nihil nesciunt aliquid vel perspiciatis aut deleniti dignissimos explicabo. Cupiditate doloremque
+        fugit accusantium. Magnam.
+        Nemo architecto, quisquam dolorem hic modi, laudantium tempore corrupti id rem molestias dolor inventore placeat
+        obcaecati autem error quod eligendi veritatis aliquid expedita dolores perferendis odit suscipit quia totam!
+        Nulla.
+        Culpa temporibus, nulla officia iusto eveniet quaerat voluptates voluptate tenetur omnis quos quod facere non,
+        porro assumenda voluptatem sequi magnam animi ipsum deserunt doloribus similique asperiores saepe repellendus.
+        Doloribus, mollitia.
+        Voluptatibus natus repudiandae commodi quia fuga facere harum eveniet quo libero quisquam cumque hic,
+        perspiciatis accusantium rerum qui beatae culpa odit reiciendis. Velit possimus provident natus accusantium
+        corporis, nihil officiis?
+        Enim molestiae repellendus exercitationem? Quam consequatur dolorum quisquam molestiae hic explicabo vitae
+        maxime? Earum neque quas minus excepturi quisquam vel, architecto iste qui, nisi velit, illum temporibus commodi
+        officiis ad!
+        Temporibus sint aspernatur iure mollitia nemo fugit dicta! In cum rem odit laborum iste minus, aliquam illo
+        iusto voluptate corporis dignissimos, quibusdam itaque sapiente laudantium ratione velit ut illum obcaecati!
+        Nemo deleniti itaque exercitationem eos. Tempore doloremque facere temporibus nulla minima animi rem sunt
+        recusandae sint, expedita, quis voluptate ipsam dolor quaerat odio molestias perspiciatis. Voluptatem dolorem a
+        alias similique?
+        Obcaecati, error temporibus? Porro saepe pariatur vero ex aliquam amet quasi, dignissimos impedit. Architecto
+        sapiente vitae soluta quod rem sit voluptatum nobis pariatur. Tenetur reiciendis ut recusandae mollitia harum
+        asperiores.
+        Ab quas minima doloremque? Soluta, cupiditate est eum dolores suscipit qui explicabo nesciunt minima eligendi
+        quam, cum quas dicta inventore, sint delectus voluptatem autem veritatis cumque id ipsum iure vero?
+        Provident debitis saepe voluptas ut hic ad ab, quasi nemo fugit, sequi dolorum fugiat illum odit ipsum sed
+        voluptate quo nihil vitae minima? Alias earum excepturi molestias voluptas ullam praesentium.
+        Quisquam, odio? Ut praesentium voluptate labore vel consequuntur laudantium earum facilis tempora minima rem
+        molestiae unde voluptatem sed distinctio hic modi mollitia, alias totam, nam optio. Numquam excepturi animi
+        velit.
+        Delectus totam eligendi earum eveniet velit illo culpa eum impedit adipisci assumenda rem unde iste esse, ipsa
+        placeat, ut, quaerat facere tenetur fugit fuga a veritatis voluptatibus dolore. Suscipit, voluptas.
+        Rerum aspernatur, iste repellendus inventore et ut accusantium fugiat asperiores officia beatae, magni eaque
+        facere nisi nesciunt laboriosam impedit. Debitis, iure. Hic quibusdam veritatis, facilis recusandae debitis
+        laboriosam modi totam.
+        Culpa deserunt vel facere temporibus incidunt, ipsum ex nam? Nisi eius repellat veritatis hic? Suscipit
+        architecto corporis optio nesciunt reprehenderit quidem, cum eveniet? Ullam ex harum soluta maiores doloremque
+        assumenda.
+        Architecto ipsum tenetur aliquid officiis. Aliquid maxime architecto fuga et, beatae iusto aut ipsa nam
+        voluptates dolorem exercitationem aliquam atque nihil adipisci distinctio sit harum amet quidem nulla ad nemo.
+        Distinctio, non praesentium accusamus quidem temporibus doloribus assumenda aspernatur molestias possimus iure
+        voluptates minus rerum, animi nesciunt fugiat voluptatibus incidunt ipsam modi. Accusantium beatae, animi ex
+        molestiae quas nam fugit?
+        Enim rem unde, veniam eveniet accusantium voluptas adipisci, voluptatibus ipsum provident quisquam, saepe non
+        laborum voluptatum quod fuga debitis. Est deleniti inventore obcaecati, debitis laboriosam explicabo! Facilis,
+        mollitia. Sequi, nemo!
+        Eaque nesciunt consequatur nulla dolore quae culpa deserunt earum ad adipisci aperiam illo cupiditate quos
+        deleniti corrupti ex, temporibus, ea maxime soluta reprehenderit unde quod provident voluptatum. Nam, voluptatem
+        corrupti?
+        Ipsum nulla nostrum eveniet numquam voluptatem. Asperiores illo nam placeat! Nobis quidem repellat, voluptatibus
+        repudiandae architecto in nisi aut officia nostrum maiores dignissimos corrupti ipsam sed totam aperiam sint
+        doloribus?
+        Eius eveniet unde alias labore ipsam corrupti quam mollitia ducimus temporibus facere blanditiis iste eaque,
+        porro nostrum cum aspernatur perspiciatis recusandae pariatur architecto quibusdam eligendi similique esse.
+        Consequuntur, natus doloremque!
+        Consequatur alias incidunt sequi! Quo alias quasi aliquid labore corrupti amet ut. Similique provident amet
+        accusantium culpa vero ullam dicta nobis veniam cum ab praesentium illo, omnis aliquam aliquid at?
+        Doloribus eos, voluptatum, asperiores in iure temporibus repellat accusantium nihil, cum eaque maxime facere
+        neque esse officia repudiandae. Facere ullam alias laudantium quas dolorum exercitationem ut incidunt obcaecati
+        cum aspernatur?
+        Aperiam fugiat ullam culpa. Eaque quibusdam, perferendis aliquam nam autem culpa omnis, nisi est facere placeat
+        architecto officiis reprehenderit voluptate odit? Ullam, qui laudantium. Dignissimos impedit atque eaque
+        expedita nobis?
+        Autem cupiditate in voluptatibus rerum asperiores quam error? Earum, iste nemo sapiente suscipit sed quidem
+        dolore expedita consequuntur ea vel quibusdam, nam inventore debitis. Saepe dolorum dolores odit quod facilis!
+        Distinctio voluptatem rem, cumque, tempora dolor vitae provident nulla officia beatae, quasi exercitationem!
+        Nesciunt ipsa, quae consequatur veritatis dolore et voluptas, sint aut corrupti, iure eveniet non distinctio
+        accusantium explicabo?
+        Laudantium, iure numquam! Odio asperiores debitis nobis fugit sunt voluptas numquam earum sequi. Architecto non
+        praesentium nobis eveniet alias voluptatem, magni dolore vel laborum amet, repudiandae velit, voluptates
+        deserunt nam?
+        Aperiam corporis distinctio voluptas deserunt veritatis facilis maxime sit, atque unde magni dolorem nihil
+        illum. Corrupti vitae perferendis cupiditate qui dicta voluptatem molestias, tenetur, neque hic eaque inventore,
+        sint ipsa!
+        Sed totam illum maxime rem? Modi, nisi aperiam earum recusandae quibusdam quidem dolorem nesciunt eius. Odit non
+        debitis, laudantium quasi corporis harum, alias eveniet facere quidem, obcaecati neque illo officiis?
+        Saepe esse voluptates mollitia illo, perspiciatis modi fugit similique nobis odio debitis animi delectus eaque
+        sit, molestiae commodi, aperiam sed quis! Deserunt nulla eos nihil officia totam sequi quo cumque.
+        Reiciendis dolorum, sit soluta placeat odit commodi vitae modi repellat, beatae laborum magni possimus dolor
+        maxime suscipit illo molestias aut quibusdam perspiciatis! Corrupti vitae totam iste amet porro ipsum quasi.
+        Molestias, earum natus? At earum accusamus in delectus? Dolores, tempore molestias pariatur similique natus quod
+        voluptas culpa laboriosam accusamus possimus officia veritatis est voluptatibus inventore, consequuntur aliquid
+        nostrum error doloribus?
+        Perspiciatis sunt amet natus, incidunt a alias doloremque magnam aliquid eaque necessitatibus? Ut, quibusdam
+        optio. Velit sint voluptates delectus similique molestias harum sed molestiae? Culpa totam minima quo officia
+        corporis?
+        Atque consequuntur magni doloribus architecto dolorem, magnam suscipit nihil quas, dolore impedit rem itaque
+        dolores blanditiis sequi accusantium esse ipsa modi tempora unde ipsum. Temporibus aliquid illo ducimus cumque
+        minima.
+        Iure eius tempore quibusdam soluta? Sint, dolores quam sapiente minus nostrum necessitatibus, alias cupiditate
+        tempore quae culpa ducimus, laudantium vero. Perferendis temporibus, explicabo culpa enim alias cumque quam
+        tenetur deserunt.
+        Ea soluta ratione reiciendis dolores exercitationem voluptate nemo aliquid deserunt excepturi at impedit quas
+        perferendis sit officiis nesciunt repellendus rerum unde aspernatur, sint quisquam possimus? Eos rem voluptatem
+        non nesciunt!
+        Facilis quaerat illo, recusandae amet tenetur ipsam aliquam iure consequatur suscipit distinctio nisi. Commodi
+        sed laborum nulla minima eaque impedit ipsum praesentium assumenda molestias ad fugiat, rem ex illo. Aliquam?
+        Quibusdam aperiam beatae sit veritatis non consectetur dolorum. Quo, eaque. Odio in architecto ullam inventore
+        totam est, exercitationem quisquam rem doloribus, numquam asperiores! Iure, aut. Corporis, maxime reiciendis!
+        Labore, quas.
+        Ipsam cupiditate adipisci facilis qui. Autem quo dignissimos delectus dolore, ad aliquid, fugiat odio quos
+        labore maiores libero ullam ab neque aut nemo incidunt perferendis minus quis, totam ex nulla!
+        Harum dolorem nemo eligendi provident alias voluptate consequatur magni non, magnam blanditiis pariatur delectus
+        suscipit. Blanditiis iste sequi tempora, impedit officiis consectetur odit eaque quia corporis ducimus ab
+        exercitationem quas!
+        Possimus ea pariatur omnis et dolorem nobis nemo expedita ipsum aspernatur ipsa blanditiis voluptas est officiis
+        mollitia atque tempore quis nulla maxime rerum sequi, reiciendis laudantium exercitationem? Ea, at consectetur?
+        Non quia repellat molestiae modi eos et quos dolorem totam iste, ex numquam veniam distinctio saepe iure
+        cupiditate sequi quam doloribus explicabo amet vel exercitationem? Accusantium voluptatem amet nemo aliquam.
+        Nostrum odio exercitationem cum aspernatur qui est nulla voluptatem tempora magni. Odio dignissimos commodi
+        iusto, itaque possimus magni similique amet, ut nobis quos at illo aut fugiat distinctio, voluptas libero.
+        Inventore quas aut earum sit exercitationem ut sint dolore eius quasi itaque eligendi accusantium, aliquid
+        cumque reiciendis rem suscipit vero. Itaque consectetur, modi at sint cumque ullam molestias repellat tempore.
+        Totam harum dolorum porro reiciendis obcaecati, eius nisi voluptatum nihil vel. Ipsam sit nisi eligendi aut
+        nulla at dolores id voluptas, maxime voluptatum! Sapiente beatae cum quos exercitationem reprehenderit
+        aspernatur.
+        Eius velit alias, labore eum molestias veniam et magnam perferendis autem quaerat, ab quod nihil exercitationem
+        officiis atque ipsa tempore at assumenda minima. Iste veniam voluptate quibusdam ullam ipsum placeat!
+    </span>
+</body>
+
+<script type="module">
+    import * as THREE from './three.module.js';
+    import { OrbitControls } from './OrbitControls.js';
+
+    let scene = new THREE.Scene();
+    //scene.background = new THREE.Color(0x000000);
+
+    /*let loader = new THREE.TextureLoader();
+    loader.load('./Matrices2Ben2Bpython.gif', function(texture){
+        scene.background = texture
+    });*/
+
+    let camera = new THREE.PerspectiveCamera(
+        75,
+        window.innerWidth / window.innerHeight
+    );
+
+    //let hlight = new THREE.AmbientLight(0x404040,100);
+
+    /*let newcamera = new THREE.OrthographicCamera(
+        5,
+        -5,
+        5,
+        -5,
+        3,
+        10
+    );
+
+    let helper = new THREE.CameraHelper(newcamera);
+
+    scene.add(helper);*/
+
+    let renderer = new THREE.WebGLRenderer();
+    //scene.add(hlight);
+
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.body.appendChild(renderer.domElement)
+
+    let material = new THREE.MeshBasicMaterial({ color: 0x0000ff, wireframe: false });
+    let materialTable = new THREE.MeshBasicMaterial({ color: 0xBA8C63, wireframe: false });
+    let materialCircle = new THREE.MeshBasicMaterial({ color: 0xff0000, wireframe: true });
+    let materialCone = new THREE.MeshBasicMaterial({ color: 0x34dbeb, wireframe: true });
+    let materialTorus3 = new THREE.MeshBasicMaterial({ color: 0xd4c713, wireframe: true });
+    let materialTorus2 = new THREE.MeshBasicMaterial({ color: 0x0000ff, wireframe: true });
+    let materialTorus = new THREE.MeshBasicMaterial({ color: 0xffffff, wireframe: true });
+    let materialCylinder = new THREE.MeshBasicMaterial({ color: 0xfffaf0, wireframe: true });
+    let materialSphere = new THREE.MeshBasicMaterial({ color: 0x34dbeb, wireframe: true });
+    let materialSphere2 = new THREE.MeshBasicMaterial({ color: 0xffffff, wireframe: true });
+    let cube = new THREE.Mesh(new THREE.BoxGeometry(7, 10, 3, 3, 3, 3), material);
+    let table = new THREE.Mesh(new THREE.BoxGeometry(20, 1, 7, 3, 3, 3), materialTable);
+    let circle = new THREE.Mesh(new THREE.CircleGeometry(1, 64, 0, Math.PI * 2), materialCircle);
+    let cone = new THREE.Mesh(new THREE.ConeGeometry(1.5, 3, 64, 3, false, Math.PI, Math.PI), materialCone);
+    let cone2 = new THREE.Mesh(new THREE.ConeGeometry(1.5, 3, 64, 3, false, 0, Math.PI), materialCylinder);
+    let cone3 = new THREE.Mesh(new THREE.ConeGeometry(1.5, 3, 64, 3, false, Math.PI, Math.PI), materialCone);
+    let cone4 = new THREE.Mesh(new THREE.ConeGeometry(1.5, 3, 64, 3, false, 0, Math.PI), materialCylinder);
+    let cone3_2 = new THREE.Mesh(new THREE.ConeGeometry(1.5, 3, 64, 3, false, Math.PI, Math.PI), materialCone);
+    let cone4_2 = new THREE.Mesh(new THREE.ConeGeometry(1.5, 3, 64, 3, false, 0, Math.PI), materialCylinder);
+    let cone5 = new THREE.Mesh(new THREE.ConeGeometry(1.5, 3, 64, 3, false, Math.PI, Math.PI), materialCylinder);
+    let cone6 = new THREE.Mesh(new THREE.ConeGeometry(1.5, 3, 64, 3, false, 0, Math.PI), materialCone);
+    let cone7 = new THREE.Mesh(new THREE.ConeGeometry(1.5, 3, 64, 3, false, Math.PI, Math.PI), materialCone);
+    let cone8 = new THREE.Mesh(new THREE.ConeGeometry(1.5, 3, 64, 3, false, 0, Math.PI), materialCylinder);
+    let cylinder = new THREE.Mesh(new THREE.CylinderGeometry(0.5, 0.5, 2, 64, 3, true, 0, Math.PI * 1), materialCylinder);
+    let sphere = new THREE.Mesh(new THREE.SphereGeometry(1.49, 64, 64, 0, Math.PI * 2), materialSphere);
+    let sphere2 = new THREE.Mesh(new THREE.SphereGeometry(1, 64, 64, 0, Math.PI * 2), materialSphere2);
+    let plane = new THREE.Mesh(new THREE.PlaneGeometry(2, 2, 3, 5), materialCylinder);
+    let tetrahedron = new THREE.Mesh(new THREE.TetrahedronGeometry(1, 1, 2, 2, false), material);
+    let torus = new THREE.Mesh(new THREE.TorusGeometry(2, 0.5, 64, 64, -Math.PI), materialTorus);
+    let torus2 = new THREE.Mesh(new THREE.TorusGeometry(2, 0.5, 32, 32), materialTorus3);
+    let torus3 = new THREE.Mesh(new THREE.TorusGeometry(1, 0.5, 32, 32), materialTorus2);
+    let torus4 = new THREE.Mesh(new THREE.TorusGeometry(1, 0.125, 16, 16), materialTorus);
+    let torus5 = new THREE.Mesh(new THREE.TorusGeometry(1, 0.5, 32, 32), materialTorus2);
+    let torus6 = new THREE.Mesh(new THREE.TorusGeometry(1, 0.125, 16, 16), materialTorus);
+    let torus7 = new THREE.Mesh(new THREE.TorusGeometry(1, 0.5, 32, 32), materialTorus2);
+    let torus8 = new THREE.Mesh(new THREE.TorusGeometry(1, 0.125, 16, 16), materialTorus);
+    let torus9 = new THREE.Mesh(new THREE.TorusGeometry(1, 0.5, 32, 32), materialTorus2);
+    let torus10 = new THREE.Mesh(new THREE.TorusGeometry(1, 0.125, 16, 16), materialTorus);
+    let ring = new THREE.Mesh(new THREE.RingGeometry(0.3, 2, 32, 3), materialCircle);
+
+    /*let loader = new THREE.GLTFLoader();
+    loader.load('scene.gltf', function(gltf){
+        scene.add(gltf.scene);
+        renderer.render(scene,camera);
+    })*/
+
+    //cube.position.z = -5;
+
+    scene.add(torus3);
+    scene.add(torus4);
+    scene.add(torus5);
+    scene.add(torus6);
+
+    scene.add(torus7);
+    scene.add(torus8);
+    scene.add(torus9);
+    scene.add(torus10);
+    scene.add(table);
+
+    scene.add(cube);
+    //scene.add(circle);
+    //scene.add(cone);
+    //scene.add(cone2);
+    scene.add(cone3);
+    scene.add(cone4);
+    scene.add(cone3_2);
+    scene.add(cone4_2);
+    scene.add(cone5);
+    scene.add(cone6);
+    scene.add(cone7);
+    scene.add(cone8);
+    //scene.add(cylinder);
+    scene.add(sphere);
+    scene.add(sphere2);
+    //scene.add(plane);
+    //scene.add(tetrahedron);
+    scene.add(torus);
+    scene.add(torus2);
+    //scene.add(ring);
+
+
+    torus.position.z = 1.5;
+    torus2.position.y = 7
+    torus2.rotation.x = Math.PI / 2;
+    cone.position.y = 4;
+    cone2.position.y = 4;
+    cone3.position.y = -6.5;
+    cone4.position.y = -6.5;
+    cone3_2.position.y = -6.5;
+    cone4_2.position.y = -6.5;
+    cone3.position.x = -2;
+    cone4.position.x = -2;
+    cone3_2.position.x = 2;
+    cone4_2.position.x = 2;
+    cone5.position.x = -5;
+    cone6.position.x = -5;
+    cone7.position.x = 5;
+    cone8.position.x = 5;
+    cone3.rotation.x = Math.PI;
+    cone4.rotation.x = Math.PI;
+    cone3_2.rotation.x = Math.PI;
+    cone4_2.rotation.x = Math.PI;
+    cone5.rotation.z = Math.PI / 2;
+    cone6.rotation.z = Math.PI / 2;
+    cone7.rotation.z = Math.PI * 1.5;
+    cone8.rotation.z = Math.PI * 1.5;
+    sphere.position.y = 2.5;
+    sphere.position.z = 0.5;
+    sphere2.position.y = 2.5;
+    sphere2.position.z = 0.85;
+
+    torus3.position.x = 7;
+    torus4.position.x = 7;
+    torus3.position.y = -10
+    torus4.position.y = -10
+    torus3.position.z = -2.5;
+    torus4.position.z = -2.5;
+    //torus3.rotation.x = Math.PI*1.5;
+    //torus4.rotation.x = Math.PI*1.5;
+    torus5.position.x = -7;
+    torus6.position.x = -7;
+    torus5.position.y = -10
+    torus6.position.y = -10
+    torus5.position.z = -2.5;
+    torus6.position.z = -2.5;
+    //torus5.rotation.x = Math.PI*1.5;
+    //torus6.rotation.x = Math.PI*1.5;
+
+    torus7.position.x = 7;
+    torus8.position.x = 7;
+
+    torus7.position.z = 2.5;
+    torus8.position.z = 2.5;
+
+    torus7.position.y = -10
+    torus8.position.y = -10
+
+    torus9.position.x = -7;
+    torus10.position.x = -7;
+
+    torus9.position.z = 2.5;
+    torus10.position.z = 2.5;
+
+    torus9.position.y = -10
+    torus10.position.y = -10
+
+    table.position.y = -8.5
+
+    camera.position.z = 20;
+
+
+    let controls = new OrbitControls(camera, renderer.domElement);
+    controls.minDistance = 0;
+    controls.maxDistance = 20;
+
+    //controls.enableZoom = false;
+    //controls.enableRotate = false;
+    controls.enableDamping = true;
+    controls.dampingFactor = 0.5;
+
+    controls.maxPolarAngle = Math.PI;
+
+    //controls.screenSpacePannning = true;
+
+    function redimensionar() {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.render(scene, camera);
+    };
+
+    window.addEventListener('resize', redimensionar);
+
+    let animate = function () {
+        requestAnimationFrame(animate);
+
+        //camera.lookAt(newcamera.position)
+
+        //camera.position.x = Math.cos(i) * 30;
+        //camera.position.z = Math.sin(i) * 30;
+        //i += 0.01;
+
+        //cube.rotation.x += 0.01;
+        //cube.rotation.y += 0.01;
+
+        torus3.rotation.z += 0.02
+        torus4.rotation.z += 0.02
+
+        torus5.rotation.z += 0.02
+        torus6.rotation.z += 0.02
+
+        torus7.rotation.z += 0.02
+        torus8.rotation.z += 0.02
+
+        torus9.rotation.z += 0.02
+        torus10.rotation.z += 0.02
+
+        renderer.render(scene, camera);
+    }
+
+    animate();
+</script>
+
+</html>
